@@ -19,6 +19,11 @@ def login(request):
     else:
         return render(request, 'login.html')
 
+#logout
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
 #register
 def register(request):
     if request.method == 'POST':
